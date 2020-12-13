@@ -1,0 +1,178 @@
+#include <iostream>
+using namespace std;
+int shape()
+{
+	return 0;
+
+}
+int oddeven(int n)
+{
+     if(n%2==0)
+     {
+         cout << "This is a prime number" << endl;
+     }
+     if(n%2!=0)
+     {
+         cout << "This is a odd number" << endl;
+     }
+}
+int sum(int x,int y)
+{
+    return(x+y);
+
+}
+int minuss(int x,int y)
+{
+    return(x-y);
+}
+int multiply(int x,int y)
+{
+    return(x*y);
+}
+int divide(int x,int y)
+{
+    return(x/y);
+}
+int mod(int x,int y)
+{
+    return(x%y);
+}
+int prime(int n)
+{
+
+int i;
+int ch=1;
+ for(i=2; i<=n/2; i++)
+    {
+        if(n%i==0)
+        {
+           ch=0;
+
+        break;
+        }
+    }
+    cout << "YOUR ANSWER IS" << endl;
+    if(ch)
+    cout << "prime"<<endl;
+    else
+    cout << "not prime"<< endl;
+
+}
+
+int fact(int n)
+
+  {
+       int fact=1;
+   int i;
+
+   for(i=1; i<=n; i++)
+   {
+     fact=fact*i;
+   }
+   cout << "YOUR ANSWER IS" << endl;
+   cout << fact << endl;
+  }
+int fab(int n)
+{
+    int i=0,cur=1,pre=0,temp;
+for(i; i<=n; i++)
+{
+    temp=cur;
+    cur=pre+cur;
+    pre=temp;
+    cout << "YOUR ANSWER IS" << endl;
+    cout << cur << endl;
+}
+
+}
+
+int main()
+{
+
+
+    while(true)
+    {
+        cout << "================================================ ( ▀͜ʖ▀)==========================================================" << endl;
+        cout     << "\t\t\t\t 1.Press '1' to find the prime number.\n" << endl;
+        cout     << "\t\t\t\t 2.Press '2' to find the  Factorial number of a number.\n" << endl;
+        cout     << "\t\t\t\t 3.Press '3' to find the  Fibonacci series of a number.\n" << endl;
+        cout     << "\t\t\t\t 4.Press '4' to find the  sum of a numbers.\n" << endl;
+        cout     << "\t\t\t\t 5.Press '5' to  minus the numbers.\n" << endl;
+        cout     << "\t\t\t\t 6.Press '6' to  divide the numbers.\n" << endl;
+        cout     << "\t\t\t\t 7.Press '7' to find the  modulus of a numbers.\n" <<  endl;
+        cout     << "\t\t\t\t 8.Press '8' to fin the odd or even number\n" <<  endl;
+        cout     << "\t\t\t\t Press 'e' in order to exit." <<  endl;
+        cout << "================================================== ( ▀͜ʖ▀)========================================================" << endl;
+       int n,a,b,choice;
+    char e;
+    cin >> choice;
+    if(choice==e)
+    {
+
+      break;
+
+    }
+    if(choice==1)
+    {
+        cout << "ENTER YOUR NUMBER: ";
+        cin>>n;
+    prime(n);
+    }
+    if(choice==2)
+    {
+        cout << "ENTER YOUR NUMBER: ";
+        cin>>n;
+    fact(n);
+    }
+    if(choice==3)
+    {
+        cout << "ENTER YOUR NUMBER: ";
+        cin>>n;
+    fab(n);
+    }
+    if(choice==4)
+    {
+       cout << "Enter your first number" << endl;
+       cin>>a;
+       cout << "Enter your second number" << endl;
+       cin >>b;
+   cout << "YOUR ANSWER IS " << sum(a,b)  << endl;
+   cout<<a<< " + " <<b << " = " << sum(a,b)  <<endl;
+    }
+    if(choice==5)
+    {
+       cout << "Enter your first number" << endl;
+       cin>>a;
+       cout << "Enter your second number" << endl;
+       cin >> b;
+   cout << "YOUR ANSWER IS " <<  minuss(a,b) << endl;
+  cout<<a<< " - " <<b << " = " << minuss(a,b)  <<endl;
+    }
+    if(choice==6)
+    {
+       cout << "Enter your first number" << endl;
+       cin>>a;
+       cout << "Enter your second number" << endl;
+       cin >> b;
+    cout << "YOUR ANSWER IS " << divide(a,b) << endl;
+    cout<<a<< " / " <<b << " = " << divide(a,b)  <<endl;
+    }
+    if(choice==7)
+    {
+    cout << "Enter your first number" << endl;
+       cin>>a;
+       cout << "Enter your second number" << endl;
+       cin >> b;
+    cout << "YOUR ANSWER IS " <<  mod(a,b) << endl;
+    cout<<a<< " % " <<b << " = " << mod(a,b)  <<endl;
+    }
+    if(choice==8)
+    {
+        cout << "ENTER YOUR NUMBER: ";
+        cin>>n;
+        oddeven(n);
+    }
+
+    }
+
+}
